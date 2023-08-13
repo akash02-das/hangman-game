@@ -10,11 +10,15 @@ function App() {
   const [wordToGuess, setWordToGuess] = useState(randomWords());
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
+  const incorrectLetters = guessedLetters.filter(
+    (letter) => !wordToGuess.includes(letter)
+  );
+
   return (
     <div className='max-w-4xl flex items-center flex-col gap-8 mx-auto'>
       <div className='text-4xl text-center'>Lose Win</div>
-      <HangmanDrawing />
-      <HangmanWord />
+      <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
+      <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
       <Keyboard />
     </div>
   );
