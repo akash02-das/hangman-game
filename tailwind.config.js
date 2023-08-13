@@ -12,6 +12,7 @@ export default {
     },
     fontFamily: {
       appFont: ['Montserrat', 'sans-serif'],
+      letterFont: ['DM Mono', 'monospace'],
     },
   },
   plugins: [],
