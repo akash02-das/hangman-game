@@ -4,12 +4,14 @@ type KeyboardProps = {
   activeLetters: string[];
   inactiveLetters: string[];
   addGuessedLetter: (letter: string) => void;
+  disabled?: boolean;
 };
 
 const Keyboard = ({
   activeLetters,
   inactiveLetters,
   addGuessedLetter,
+  disabled = false,
 }: KeyboardProps) => {
   return (
     <div className='self-stretch'>
@@ -28,7 +30,7 @@ const Keyboard = ({
               className={`w-full bg-none text-gray-800 border-solid border-2 border-gray-800 text-4xl uppercase p-2 font-bold cursor-pointer rounded-lg shadow-lg hover:bg-slate-300 ${
                 isActive ? 'active' : ''
               } ${isInactive ? 'inactive' : ''}`}
-              disabled={isInactive || isActive}
+              disabled={isInactive || isActive || disabled}
             >
               {key}
             </button>

@@ -1,9 +1,14 @@
 type HangmanWordProps = {
   guessedLetters: string[];
   wordToGuess: string;
+  reveal?: boolean;
 };
 
-const HangmanWord = ({ guessedLetters, wordToGuess }: HangmanWordProps) => {
+const HangmanWord = ({
+  guessedLetters,
+  wordToGuess,
+  reveal = false,
+}: HangmanWordProps) => {
   return (
     <div className='flex text-5xl font-bold uppercase font-letterFont gap-4'>
       {wordToGuess.split('').map((letter, index) => (
@@ -13,7 +18,13 @@ const HangmanWord = ({ guessedLetters, wordToGuess }: HangmanWordProps) => {
         >
           <span
             className={`${
-              guessedLetters.includes(letter) ? 'visible' : 'invisible'
+              guessedLetters.includes(letter) || reveal
+                ? 'visible'
+                : 'invisible'
+            } ${
+              !guessedLetters.includes(letter) && reveal
+                ? 'text-red-500'
+                : 'text-gray-800'
             }`}
           >
             {letter}
