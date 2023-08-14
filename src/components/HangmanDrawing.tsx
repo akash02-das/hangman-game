@@ -1,17 +1,27 @@
+import hangKnotImage from '../assets/hang-knot.png';
+import sadFaceImage from '../assets/sad-face.png';
+
 const HEAD = (
-  <div className='w-[50px] h-[50px] rounded-full border-[10px] border-solid border-bodyColor absolute top-[40px] right-[-20px]' />
+  <img
+    src={sadFaceImage}
+    alt='face'
+    className='w-[45px] h-[45px] absolute top-[48px] right-[-18px] z-10'
+  />
 );
 
 const BODY = (
-  <div className='w-[10px] h-[100px] bg-bodyColor absolute top-[88px] right-0' />
+  <div>
+    <div className='w-[15px] h-[25px] bg-bodyColor absolute top-[88px] right-[-2px]' />
+    <div className='w-[30px] h-[75px] bg-bodyColor absolute top-[110px] right-[-10px] rounded-lg' />
+  </div>
 );
 
 const RIGHT_ARM = (
-  <div className='w-[80px] h-[10px] bg-bodyColor absolute top-[120px] right-[-80px] rotate-[-30deg] origin-bottom-left rounded-lg' />
+  <div className='w-[65px] h-[10px] bg-bodyColor absolute top-[110px] right-[-70px] rotate-[-30deg] origin-bottom-left rounded-lg' />
 );
 
 const LEFT_ARM = (
-  <div className='w-[80px] h-[10px] bg-bodyColor absolute top-[120px] right-[10px] rotate-[30deg] origin-bottom-right rounded-lg' />
+  <div className='w-[65px] h-[10px] bg-bodyColor absolute top-[110px] right-[18px] rotate-[30deg] origin-bottom-right rounded-lg' />
 );
 
 const RIGHT_LEG = (
@@ -32,7 +42,11 @@ const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
   return (
     <div className='relative'>
       {BODY_PARTS.slice(0, numberOfGuesses)}
-      <div className='w-[10px] h-[50px] bg-ironColor absolute top-0 right-0 rounded-lg' />
+      <img
+        src={hangKnotImage}
+        alt='face'
+        className='w-[80px] h-[80px] absolute top-[10px] right-[-30px]'
+      />
       <div className='w-[200px] h-[10px] bg-ironColor ml-[120px]' />
       <div className='w-[10px] h-[400px] bg-ironColor ml-[120px]' />
       <div className='w-[250px] h-[10px] bg-ironColor rounded-lg' />

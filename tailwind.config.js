@@ -7,7 +7,7 @@ export default {
         bodyBackground: '#f2f4f8',
         primaryColor: '#002333',
         ironColor: '#66615C',
-        bodyColor: '#d1a3a4',
+        bodyColor: '#cab26a',
       },
     },
     fontFamily: {
