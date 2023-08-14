@@ -1,27 +1,23 @@
-# React + TypeScript + Vite
+# Hangman Game - The perfect beginner React + TypeScript project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Hangman game using React, TypeScript and TailwindCSS. It is easy enough logic-wise but still includes many complicated problems to solve.
 
-Currently, two official plugins are available:
+#### Project Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**This project uses `react@v18` and `TypeScript@v5` with `Vite@v4` and `TailwindCSS@v3` for styles**
 
-## Expanding the ESLint configuration
+_After cloning this project and go to the project directory, you have to run:_
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**`npm install` or `yarn install`**
 
-- Configure the top-level `parserOptions` property like this:
+and
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+**`npm run dev` or `yarn run dev`**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+_and your development environment is ready to run._
+
+#### Contributors
+
+[Akash Das](https://github.com/akash02-das)
+
+_Happy Hacking!_
